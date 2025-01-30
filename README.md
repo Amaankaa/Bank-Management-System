@@ -1,64 +1,61 @@
-Bank Management System in C++
-Project Description
-This project is a simple yet functional Bank Management System developed in C++. It allows users to perform essential banking operations such as creating accounts, depositing and withdrawing money, and viewing or deleting accounts. Data persistence is ensured through binary file storage, making it a practical and interactive solution for bank account management.
+# Bank Management System
 
-Features
-Account Creation: Create new accounts with user details such as PIN, account type, and initial deposit.
-Deposit & Withdrawal: Perform secure transactions with validation based on account type and balance.
-Balance Inquiry: Check account details and current balance using the account PIN.
-View All Accounts: Display a list of all existing accounts with their information.
-Delete Account: Permanently remove an account from the system.
-Data Persistence: Store and retrieve account details using binary files (account.dat).
-Interactive User Interface: A simple menu-driven interface for seamless user experience.
-Technologies Used
-Programming Language: C++
-Data Storage: File handling with binary files
-Compiler: Any modern C++ compiler (e.g., g++, Visual Studio)
-How to Run the Project
-Clone the repository:
-bash
-Copy
-git clone https://github.com/your_username/bank-management-system.git
-cd bank-management-system
-Compile the code:
-bash
-Copy
-g++ main.cpp -o bank_management
-Run the program:
-bash
-Copy
-./bank_management
-Follow the interactive menu to perform banking operations.
-File Structure
-perl
-Copy
-bank-management-system/
-├── main.cpp        # Main program file
-└── account.dat      # Data file for account storage
-Sample Menu Display
-markdown
-Copy
-*****Welcome to our Bank*****
-===============================
-         MAIN MENU            
-===============================
+## Overview
+This is a simple **Bank Management System** implemented in C++. It allows users to create, manage, and delete bank accounts, as well as deposit and withdraw money. The program uses file handling to store account details persistently.
 
-1. Create an account
-2. Deposit Money
-3. Withdraw Money
-4. Balance Enquiry
-5. Display Existing Accounts
-6. Delete an Account
-7. Exit
+## Features
+- Create an account
+- Deposit money
+- Withdraw money
+- Balance enquiry
+- Display existing accounts
+- Delete an account
 
-Enter your choice:
-Contributions
-Feel free to fork the repository, submit pull requests, or report issues to help improve the system.
+## Technologies Used
+- **C++** for implementation
+- **File Handling** for storing account data persistently
+- **Command Line Interface (CLI)** for user interaction
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Installation and Usage
+### Prerequisites
+Ensure you have a C++ compiler installed. You can use **g++ (MinGW)** for Windows or **g++ (GCC)** for Linux/Mac.
 
-Acknowledgment
-Special thanks to Amanuel Merara, Abenezer Gdilew, Yosef Solomon, Mikiyas Abebe, and Lemi Abduljebar for their contributions to the project.
+### Steps to Compile and Run
+1. Clone this repository or download the source code.
+2. Open a terminal and navigate to the project folder.
+3. Compile the code using the following command:
+   ```sh
+   g++ bank_management.cpp -o bank_management
+   ```
+4. Run the executable:
+   ```sh
+   ./bank_management   # On Linux/Mac
+   bank_management.exe  # On Windows
+   ```
 
-Let me know if you want any edits, homie!
+## File Handling
+- The system stores account details in a file named **account.dat**.
+- The file is updated with every transaction or account modification.
+- Deleted accounts are removed by rewriting the data into a temporary file and renaming it.
+
+## Program Structure
+The project consists of the following key functions:
+- `write_account()`: Creates a new account and saves it to a file.
+- `deposit_withdraw(int, int)`: Deposits or withdraws money from an account.
+- `display_sp(int)`: Displays details of a specific account.
+- `display_all()`: Displays all existing accounts.
+- `delete_account(int)`: Deletes an account from the file.
+- `intro()`: Displays an introduction screen.
+
+## Contributors
+- **Amanuel Merara** (UGR/30138/15)
+- **Abenezer Gdilew** (UGR/30076/15)
+- **Yosef Solomon** (UGR/31454/15)
+- **Mikiyas Abebe** (UGR/26684/15)
+- **Lemi Abduljebar** (UGR/30821/15)
+
+## License
+This project is open-source and available under the MIT License.
+
+---
+**Thank you for using our Bank Management System!**
